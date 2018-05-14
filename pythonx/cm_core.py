@@ -648,6 +648,7 @@ class CoreHandler(cm.Base):
 
                 # snippet word should not contain spaces
                 rp = m['snippet_word'].split(' ')[0]
+                rp = rp.split('$')[0]
                 m['word'] = m['word'][:-len(m['snippet_word'])] + rp
                 m['snippet_word'] = rp
 
